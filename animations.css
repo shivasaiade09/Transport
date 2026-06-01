@@ -1,0 +1,93 @@
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Floating animation */
+
+@keyframes floatTruck {
+    0% {
+        transform: translateX(-50px);
+    }
+
+    50% {
+        transform: translateX(50px);
+    }
+
+    100% {
+        transform: translateX(-50px);
+    }
+}
+
+/* Pulse effect */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Fade Up Animation */
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glowing cards */
+
+.card:hover {
+    box-shadow:
+        0 0 10px #2563eb,
+        0 0 20px #2563eb,
+        0 0 30px #2563eb;
+}
+
+/* Hero button pulse */
+
+.hero button {
+    animation: pulse 2s infinite;
+}
+
+/* Floating WhatsApp Button */
+
+.whatsapp-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #25D366;
+    color: white;
+    font-size: 32px;
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* Truck Banner */
+
+.truck-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 40px;
+    z-index: 998;
+    animation: floatTruck 15s linear infinite;
+}
